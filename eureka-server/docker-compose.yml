@@ -1,17 +1,18 @@
 version: "3.8"
 
 services:
-  springboot:
+  eureka_server_service:
+    container_name: application-eureka-server
     build:
-      context: docker
+      context: .
       dockerfile: Dockerfile
     ports:
       - "8761:8761"
     networks:
-      - app_network
+      - rede1
     environment:
       EUREKA_SERVER_URL: http://192.168.38.129:8761/eureka/
 
 networks:
-  app_network:
+  rede1:
     driver: bridge
