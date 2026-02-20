@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-  eureka_server_service:
+  eureka-server:
     container_name: container-eureka-server
     build:
       context: .
